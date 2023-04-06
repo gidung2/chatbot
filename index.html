@@ -40,23 +40,25 @@
         height: 100vh;
         display: grid;
         justify-content: center;
-        background-color: transparent;
+        background-image: url("1.png");
     }
 
     #main {
         margin: 0;
         height: 100vh;
         width: 100vw;
-        max-width: 1000px;
+        max-width: 1200px;
+        background-image: url("2.png");
+        background-size: contain;
     }
 
     #msg_send {
         outline: none;
         font-size: 13px;
         padding: 0 16px;
-        background: #ececee;
-        color: #333;
-        border: solid 1px #777;
+        background-image: url("1.png");
+        color: #000000;
+        border: solid 5px #c115f694;
         border-radius: 5px;
         
     }
@@ -64,8 +66,8 @@
     .input {
         height: 5%;
         display: grid;
-        grid-template-columns: 80% 20%;
-        margin: 8px 8px;
+        grid-template-columns: 70% 5%;
+        margin: 8px 50px;
         min-height: 40px;
         font-family: 'Rowdies', cursive;
     }
@@ -173,9 +175,9 @@ font-family: 'Secular One', sans-serif;
     }
 
     .avatar {
-        border-radius: 50%;
-        width: 68px;
-        height: 68px;
+        border-radius: 30%;
+        width: 100px;
+        height: 100px;
         margin-right: 0.2rem;
     }
 </style>
@@ -183,7 +185,7 @@ font-family: 'Secular One', sans-serif;
 <body onload="init()" class="">
     <div id="main">
 
-        <h2>Waifu AI</h2>
+        <h2>Chat Bot</h2>
 
         <div id="msg">
             <div id="robot">
@@ -207,7 +209,7 @@ font-family: 'Secular One', sans-serif;
 
         function init() {
             let res_img = document.createElement("span")
-            res_img.innerHTML = '<img src="avatar.png" class="avatar" />'
+            res_img.innerHTML = '<img src="ava.png" class="avatar" />'
             // res_img.setAttribute("class", "left");
 
             let res_elm = document.createElement("div");
@@ -306,7 +308,7 @@ font-family: 'Secular One', sans-serif;
                     message.appendChild(container2);
 
                     let res_img = document.createElement("span")
-                    res_img.innerHTML = '<img src="avatar.png" class="avatar" />'
+                    res_img.innerHTML = '<img src="ava.png" class="avatar" />'
                     container2.appendChild(res_img);
                     
                     container2.appendChild(data_res);
